@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Full Planning Package",
+    "image": "https://i.ibb.co/k0cBMZM/wedding-decor-set-1366x768.gif",
+    "price": 650000,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 2,
+    "name": "Destination Wedding Package",
+    "image": "https://i.ibb.co/FbH8HT4/60e548b58a373a7f865900fd-04d99656-bf8a-4a2d-a2b2-30833018c575-1024x680.jpg",
+    "price": 450000,
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 3,
+    "name": "Express Wedding Package",
+    "image": "https://i.ibb.co/PQnzhvG/10-Crucial-Wedding-Planning-Tips-and-Tricks.webp",
+    "price": 790000,
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "id": 4,
+    "name": "Glamorous Wedding Package",
+    "image": "https://i.ibb.co/M6QYJbY/18b39993-49ca-4f55-9cdf-9bdbe285e955.jpg",
+    "price": 850000,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 5,
+    "name": "Classic Wedding Package",
+    "image": "https://i.ibb.co/SBsJPHT/classic-wedding12.jpg",
+    "price": 350000,
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "id": 6,
+    "name": "Fairytale Wedding Package",
+    "image": "https://i.ibb.co/TH2WYwr/bride-and-groom-riding-in-a-carriage.jpg",
+    "price": 2500000,
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]
