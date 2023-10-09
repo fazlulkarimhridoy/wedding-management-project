@@ -5,26 +5,10 @@ import swal from 'sweetalert';
 
 
 const Login = () => {
-  const { login, googleSignIn } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
-
-
-
-  const handleGoogleSignIn = () => {
-    googleSignIn()
-      .then(result => {
-        console.log(result.user);
-        swal("Successfully registered via google!", "success");
-        navigate(location?.state ? location.state : '/')
-
-      })
-      .catch(error => {
-        console.log(error);
-        swal("oops something went wrong!", "error");
-      })
-  }
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -97,15 +81,6 @@ const Login = () => {
               <Link to="/register"><p className="underline inline-block">Register</p></Link>
             </div>
           </form>
-          <button onClick={handleGoogleSignIn}
-            type="submit"
-            className="block w-full mt-4 rounded-lg bg-sky-600 px-5 py-3 text-sm font-medium text-white"
-          >
-            Sign In with Google
-          </button>
-
-
-
         </div>
       </div>
     </div>
