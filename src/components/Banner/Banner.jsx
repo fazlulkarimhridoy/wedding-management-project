@@ -2,7 +2,7 @@ import { BannerImage } from "./Images";
 
 const Banner = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto  p-6">
             <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div
