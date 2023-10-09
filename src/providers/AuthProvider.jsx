@@ -12,6 +12,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
+    const [reloading,setReloading] = useState(true);
 
 
 
@@ -26,18 +27,22 @@ const AuthProvider = ({children}) => {
 
     const googleProvider = new GoogleAuthProvider();
     const googleSignIn = (value)=>{
+        setReloading(true);
         signInWithPopup(auth,googleProvider);
     }
 
     const createUser = (email,password)=>{
+        setReloading(true);
         return createUserWithEmailAndPassword(auth,email,password);
     }
 
     const login = (email,password)=>{
+        setReloading(true);
         return signInWithEmailAndPassword(auth,email,password);
     }
 
     const logout = () =>{
+        setReloading(true);
         return signOut(auth);
     }
 
@@ -47,7 +52,8 @@ const AuthProvider = ({children}) => {
         createUser,
         logout,
         login,
-        googleSignIn
+        googleSignIn,
+        reloading
     }
 
     return (
