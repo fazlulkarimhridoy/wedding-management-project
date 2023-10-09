@@ -10,38 +10,39 @@ const auth = getAuth(app);
 
 
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [reloading,setReloading] = useState(true);
+    const [reloading, setReloading] = useState(true);
 
 
 
-    useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(auth,currentUser=>{
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setReloading(false)
         });
-        return ()=>{
+        return () => {
             unsubscribe();
         }
-    },[])
+    }, [])
 
     const googleProvider = new GoogleAuthProvider();
-    const googleSignIn = (value)=>{
+    const googleSignIn = (value) => {
         setReloading(true);
-        signInWithPopup(auth,googleProvider);
+        signInWithPopup(auth, googleProvider);
     }
 
-    const createUser = (email,password)=>{
+    const createUser = (email, password) => {
         setReloading(true);
-        return createUserWithEmailAndPassword(auth,email,password);
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const login = (email,password)=>{
+    const login = (email, password) => {
         setReloading(true);
-        return signInWithEmailAndPassword(auth,email,password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const logout = () =>{
+    const logout = () => {
         setReloading(true);
         return signOut(auth);
     }

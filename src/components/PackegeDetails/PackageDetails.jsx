@@ -1,14 +1,11 @@
-import { useContext } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 
 const PackageDetails = () => {
-    const {reloading} = useContext(AuthContext);
     const { packageId } = useParams();
-    const Idint = parseInt(packageId);
+    const idInt = parseInt(packageId);
     const packageData = useLoaderData();
-    const singleData = packageData.find(data => data.id === Idint);
-    console.log(singleData);
+    console.log(packageData);
+    const singleData = packageData?.find(data => data.id === idInt);
     const { name, image, price, description } = singleData;
     return (
         <div>
