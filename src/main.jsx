@@ -13,6 +13,7 @@ import Register from './routes/Register/Register';
 import PackageDetails from './components/PackegeDetails/PackageDetails';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute/PrivateRoute';
+import Planner from './routes/Planner/Planner';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         path: "/package/:packageId",
         element: <PrivateRoute><PackageDetails></PackageDetails></PrivateRoute>,
         loader: () => fetch('/data.json')
+      },
+      {
+        path: "/planner",
+        element: <PrivateRoute><Planner></Planner></PrivateRoute>
       }
     ]
   }
