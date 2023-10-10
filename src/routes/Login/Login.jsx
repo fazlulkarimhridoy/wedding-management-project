@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -15,6 +14,7 @@ const Login = () => {
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
+    
 
     login(email, password)
       .then(result => {
@@ -45,6 +45,7 @@ const Login = () => {
             className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
           >
             <p className="text-center text-lg font-medium">Fill these to sign in</p>
+
 
             <div>
               <div className="relative">
