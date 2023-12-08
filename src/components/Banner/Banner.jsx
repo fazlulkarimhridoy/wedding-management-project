@@ -1,4 +1,4 @@
-import { BannerImage } from "./Images";
+// import { BannerImage } from "./Images";
 
 const Banner = () => {
     return (
@@ -29,7 +29,7 @@ const Banner = () => {
 
                 <img
                     alt="Student"
-                    src={BannerImage}
+                    src="https://i.ibb.co/SmnZfNf/Sidharth-Malhotra-Kiara-Advani-Wedding-First-photos-of-Shershaah-couple-are-etheteral-Ab-humari-perm.jpg"
                     className="h-56 w-full object-cover sm:h-full"
                 />
             </section>
